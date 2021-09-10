@@ -1,0 +1,228 @@
+/* ================================================= 
+   Base Element Styles
+==================================================== */
+
+*, *:before, *:after { 
+   box-sizing: border-box;
+   
+}
+
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: 'Merriweather', serif;  
+  text-align: center; 
+}
+
+header {
+  padding: 20px;
+  background-color: #384047;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 auto;
+}
+
+h2 {
+  color: #384047;
+  margin-top: 30px;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+hr {
+  max-width: 95%;
+  color: #000;
+}
+
+.top-line {
+  border: 3px solid;
+  margin-bottom: 3px; 
+}
+
+.bottom-line {
+  margin-top: 1px;
+  margin-bottom: 0;
+}
+
+form {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.intro-text {
+  color: grey;
+  font-weight: 200;
+  margin: 16px 15px 32px 15px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  color: gray; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #000;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+input::placeholder {
+  text-align: right;
+  font-style: italic;
+  font-size: 90%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+  border: solid 2px navy;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#zip {
+  width: 50%;
+}
+
+/* The next 2 selectors are to remove the counters from the zip code input. The code was take from https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-text {
+  color: grey;
+}
+
+.checkboxes, .radio-buttons {
+  margin-left: 20px;
+}
+
+textarea {
+  margin-bottom: 15px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 20px;
+  width: 95%;
+  font-weight: bold;
+  color:#fff;
+  background-color: #52bab3;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px; 
+  border-radius: 5px;
+  font-family: 'Merriweather', serif;
+
+}
+
+.copyright {
+  font-style: italic;
+  color: #808080;
+  font-size: 90%; 
+  font-weight: lighter;
+  text-align: center;
+}
+
+
+/* ================================================= 
+   Media query for tablet and desktop
+==================================================== */
+
+
+@media (min-width: 768px) {
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  select {
+    width: 500px;
+  }
+
+  fieldset {
+    display: inline-block;
+  }
+
+  label:not(.other-topics-label) {
+    display: inline-block;
+    width: 160px;
+  }
+
+  .flex-container {
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: 3px; 
+  }
+
+  .contact-info {
+    flex-direction: column; 
+  }
+
+  h2 {
+    margin-top: 60px;
+  }
+
+  .intro-text {
+    margin-bottom: 48px;
+  }
+
+  #zip {
+  width: 25%;
+}
+
+}
+
+
+
+
